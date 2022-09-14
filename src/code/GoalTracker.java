@@ -15,6 +15,10 @@ public class GoalTracker {
 		return currTotal >= goal;
 	}
 	
+	public int getCurrTotal() {
+		return currTotal;
+	}
+	
 	public void addHistoryItem(HistoryItem historyItem) {
 		historyItems.add(historyItem);
 		currTotal += historyItem.getAmount();

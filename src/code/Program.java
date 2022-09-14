@@ -14,6 +14,10 @@ public class Program {
 		while (!goalTracker.goalIsMet()) {
 			System.out.println("Enter a new accomplished amount: ");
 			int accomplishedAmount = keyboardInput.nextInt();
+			while (accomplishedAmount <= 0) {
+				System.out.println("That amount is invalid, please enter a positive amount: ");
+				accomplishedAmount = keyboardInput.nextInt();
+			}
 			goalTracker.addHistoryItem(new HistoryItem(accomplishedAmount));
 		}
 		System.out.println("Goal met");
