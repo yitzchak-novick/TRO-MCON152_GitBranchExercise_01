@@ -15,6 +15,10 @@ public class GoalTracker {
 		return currTotal >= goal;
 	}
 	
+	public int getGoal() {
+		return goal;
+	}
+	
 	public int getCurrTotal() {
 		return currTotal;
 	}

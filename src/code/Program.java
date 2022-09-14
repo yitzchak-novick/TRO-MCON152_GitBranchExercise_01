@@ -9,6 +9,10 @@ public class Program {
 		Scanner keyboardInput = new Scanner(System.in);
 		System.out.println("Enter the goal amount: ");
 		int goalAmount = keyboardInput.nextInt();
+		while (goalAmount <= 0) {
+			System.out.println("Invalid goal amount, please enter a positive amount: ");
+			goalAmount = keyboardInput.nextInt();
+		}
 		keyboardInput.nextLine();
 		goalTracker = new GoalTracker(goalAmount);
 		while (!goalTracker.goalIsMet()) {
@@ -21,6 +25,9 @@ public class Program {
 			goalTracker.addHistoryItem(new HistoryItem(accomplishedAmount));
 		}
 		System.out.println("Goal met");
+		if (goalTracker.getCurrTotal() > goalTracker.getGoal()) {
+			System.out.println("Goal was exceeded by " + (goalTracker.getGoal() - goalTracker.getCurrTotal()));
+		}
 	}
 
 }
