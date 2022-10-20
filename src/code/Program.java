@@ -22,8 +22,11 @@ public class Program {
 				System.out.println("That amount is invalid, please enter a positive amount: ");
 				accomplishedAmount = keyboardInput.nextInt();
 			}
-			goalTracker.addHistoryItem(new HistoryItem(accomplishedAmount));
+
+			goalTracker.addHistoryItem(new HistoryItem(accomplishedAmount, "Description", new Date()));
+
 			System.out.print("Your Deficit Is: " + goalTracker.getDeficit());
+
 		}
 		System.out.println("Goal met");
 		if (goalTracker.getCurrTotal() > goalTracker.getGoal()) {
