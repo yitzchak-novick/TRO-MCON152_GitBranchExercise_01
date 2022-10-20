@@ -6,9 +6,11 @@ public class GoalTracker {
 	private int goal;
 	private int currTotal = 0;
 	private ArrayList<HistoryItem> historyItems = new ArrayList<HistoryItem>();
+	private String description;
 	
-	public GoalTracker(int goal) {
+	public GoalTracker(int goal, String description) {
 		this.goal = goal;
+		this.description = description;
 	}
 	
 	public boolean goalIsMet() {

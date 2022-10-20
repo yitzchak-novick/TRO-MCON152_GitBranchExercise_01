@@ -14,7 +14,7 @@ public class Program {
 			goalAmount = keyboardInput.nextInt();
 		}
 		keyboardInput.nextLine();
-		goalTracker = new GoalTracker(goalAmount);
+		goalTracker = new GoalTracker(goalAmount, "Goal Tracker");
 		while (!goalTracker.goalIsMet()) {
 			System.out.println("Enter a new accomplished amount: ");
 			int accomplishedAmount = keyboardInput.nextInt();
