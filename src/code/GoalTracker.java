@@ -27,4 +27,5 @@ public class GoalTracker {
 		historyItems.add(historyItem);
 		currTotal += historyItem.getAmount();
 	}
+//Coder2 added branch
 }
